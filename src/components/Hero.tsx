@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
             <a href="https://github.com/RishiSpace" target="_blank" rel="noopener noreferrer">
               <Github size={24} />
             </a>
-            <a href="Resume-Rishikesh-Giridhar.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="media/Resume-Rishikesh-Giridhar.pdf" target="_blank" rel="noopener noreferrer">
               <FileText size={24} />
             </a>
           </div>
