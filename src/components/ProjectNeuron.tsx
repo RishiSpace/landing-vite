@@ -6,15 +6,18 @@ interface ProjectNeuronProps {
   x: number;
   y: number;
   index: number;
+  isLineHovered?: boolean; // Added this prop
 }
 
-const ProjectNeuron: React.FC<ProjectNeuronProps> = ({ project, x, y, index }) => {
-  const [isHovered, setIsHovered] = useState(false);
+const ProjectNeuron: React.FC<ProjectNeuronProps> = ({ project, x, y, index, isLineHovered }) => { // Destructured isLineHovered
+  const [isDirectlyHovered, setIsDirectlyHovered] = useState(false); // Renamed for clarity
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleClick = () => {
     setIsExpanded(!isExpanded);
   };
+
+  const showInfo = isDirectlyHovered || isLineHovered || isExpanded; // Updated logic
 
   return (
     <div 
@@ -24,12 +27,12 @@ const ProjectNeuron: React.FC<ProjectNeuronProps> = ({ project, x, y, index }) =
         top: y,
         animationDelay: `${index * 0.1}s`
       }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => setIsDirectlyHovered(true)} // Updated state setter
+      onMouseLeave={() => setIsDirectlyHovered(false)} // Updated state setter
       onClick={handleClick}
     >
-      <div className={`neuron-pulse ${isHovered || isExpanded ? 'hovered' : ''}`}></div>
-      <div className={`neuron-info ${isHovered || isExpanded ? 'visible' : ''}`}>
+      <div className={`neuron-pulse ${showInfo ? 'hovered' : ''}`}></div> {/* Updated logic */}
+      <div className={`neuron-info ${showInfo ? 'visible' : ''}`}> {/* Updated logic */}
         <p className="neuron-title">{project.title}</p>
         <div className={`neuron-description ${isExpanded ? 'fade-in' : ''}`}>
           <p>{project.description}</p>

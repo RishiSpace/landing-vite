@@ -6,9 +6,10 @@ interface CertificateNeuronProps {
   x: number;
   y: number;
   index: number;
+  isLineHovered?: boolean; // Ensure this line is present and correct
 }
 
-const CertificateNeuron: React.FC<CertificateNeuronProps> = ({ certificate, x, y, index }) => {
+const CertificateNeuron: React.FC<CertificateNeuronProps> = ({ certificate, x, y, index, isLineHovered }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (

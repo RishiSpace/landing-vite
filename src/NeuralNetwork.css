@@ -1,0 +1,10 @@
+.helper-text {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none; /* Prevent interaction when invisible */
+  }
+  
+  .helper-text.visible {
+    opacity: 1;
+    pointer-events: auto; /* Allow interaction when visible */
+  }
