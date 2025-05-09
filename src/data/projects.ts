@@ -17,7 +17,7 @@ const projects: Project[] = [
     id: "fastwrite",
     title: "FastWrite",
     description: "A python package for generating AI-based code documentation and data flow diagrams with support for Various LLM Providers.",
-    technologies: ["Python", "OpenAI API", "NLP"]
+    technologies: ["Python", "OpenAI , Groq , Gemini API", "NLP"]
   },
   {
     id: "osfm-markdown",
@@ -26,34 +26,16 @@ const projects: Project[] = [
     technologies: ["React", "TypeScript", "Cloud Storage API"]
   },
   {
+    id: "osfm-ata",
+    title: "OSFM AI Terminal Assistant",
+    description: "An AI-Enhanced Open-Source tool that leverages Natural Language Processing (NLP) to generate terminal commands.",
+    technologies: ["React", "TypeScript", "Groq API"]
+  },
+  {
     id: "handwriting-recognition",
     title: "Handwriting Recognition",
     description: "A neural network-based system to classify and recognize handwritten characters.",
     technologies: ["Python", "TensorFlow", "Computer Vision"]
-  },
-  {
-    id: "project-5",
-    title: "AI Research Tool",
-    description: "A tool that uses natural language processing to help researchers find relevant papers and citations.",
-    technologies: ["Python", "NLP", "React"]
-  },
-  {
-    id: "project-6",
-    title: "Smart Home System",
-    description: "An IoT system for monitoring and controlling home devices with voice commands and mobile app.",
-    technologies: ["IoT", "React Native", "Node.js"]
-  },
-  {
-    id: "project-7",
-    title: "Blockchain Wallet",
-    description: "A secure digital wallet for cryptocurrency transactions with multi-factor authentication.",
-    technologies: ["Blockchain", "React", "Cryptography"]
-  },
-  {
-    id: "project-8",
-    title: "Health Monitoring App",
-    description: "A mobile application that tracks health metrics and provides personalized recommendations.",
-    technologies: ["React Native", "Machine Learning", "Health APIs"]
   }
 ];
 

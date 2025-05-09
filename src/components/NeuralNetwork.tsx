@@ -19,6 +19,7 @@ const NeuralNetwork: React.FC = () => {
     x: window.innerWidth / 2,
     y: window.innerHeight / 2
   });
+  const neuronHalfSize = 6; // Neurons are 12x12, so half is 6px
 
   useEffect(() => {
     const handleResize = () => {
@@ -56,16 +57,16 @@ const NeuralNetwork: React.FC = () => {
 
     for (let i = 0; i < leftCount; i++) {
       leftNeurons.push({
-        x: windowDimensions.width * 0.15,
-        y: leftSpacing * (i + 1),
+        x: windowDimensions.width * 0.15, // Center X for left neurons
+        y: leftSpacing * (i + 1),        // Center Y
         title: certificates[i].title
       });
     }
 
     for (let i = 0; i < rightCount; i++) {
       rightNeurons.push({
-        x: windowDimensions.width * 0.85,
-        y: rightSpacing * (i + 1),
+        x: windowDimensions.width * 0.85, // Center X for right neurons
+        y: rightSpacing * (i + 1),        // Center Y
         title: projects[i].title
       });
     }
@@ -77,7 +78,7 @@ const NeuralNetwork: React.FC = () => {
       const cpY = from.y - 80 + Math.sin(t + from.y) * 20;
 
       ctx.beginPath();
-      ctx.moveTo(from.x, from.y - 6);
+      ctx.moveTo(from.x, from.y); // Connect line to neuron's center
       ctx.quadraticCurveTo(cpX, cpY, to.x, to.y);
 
       const glow = 0.4 + 0.6 * Math.abs(Math.sin(t + from.y / 100));
@@ -121,26 +122,31 @@ const NeuralNetwork: React.FC = () => {
       <canvas ref={canvasRef} className="neural-canvas"></canvas>
       
       {certificates.map((cert, index) => {
-        const y = (windowDimensions.height / (certificates.length + 1)) * (index + 1);
+        const neuronCenterX = windowDimensions.width * 0.15;
+        const neuronCenterY = (windowDimensions.height / (certificates.length + 1)) * (index + 1);
         return (
           <CertificateNeuron 
             key={cert.id}
             certificate={cert}
-            x={windowDimensions.width * 0.15}
-            y={y}
+            x={neuronCenterX - neuronHalfSize} // Position top-left for left: style
+            y={neuronCenterY - neuronHalfSize} // Position top-left for top: style
             index={index}
           />
         );
       })}
       
       {projects.map((project, index) => {
-        const y = (windowDimensions.height / (projects.length + 1)) * (index + 1);
+        const neuronCenterX = windowDimensions.width * 0.85; // Target center X for project neurons
+        const neuronCenterY = (windowDimensions.height / (projects.length + 1)) * (index + 1);
         return (
           <ProjectNeuron
             key={project.id}
             project={project}
-            x={windowDimensions.width * 0.85}
-            y={y}
+            // x prop for ProjectNeuron is used for 'style.right'
+            // style.right = viewportWidth - (neuron_actual_right_edge_X_coord)
+            // neuron_actual_right_edge_X_coord = neuronCenterX + neuronHalfSize
+            x={windowDimensions.width - (neuronCenterX + neuronHalfSize)}
+            y={neuronCenterY - neuronHalfSize} // Position top-left for top: style
             index={index}
           />
         );
