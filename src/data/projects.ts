@@ -32,6 +32,12 @@ const projects: Project[] = [
     technologies: ["React", "TypeScript", "Groq API"]
   },
   {
+    id: "osfm-creds",
+    title: "OSFM Credentials Manager",
+    description: "A Local-first web-app designed to store various credentials such as API SSH GPG and Passwords",
+    technologies: ["React", "TypeScript", "Groq API"]
+  },
+  {
     id: "handwriting-recognition",
     title: "Handwriting Recognition",
     description: "A neural network-based system to classify and recognize handwritten characters.",
