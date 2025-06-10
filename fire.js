@@ -36,9 +36,9 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebas
         timestamp: new Date().toISOString()
       });
 
-      console.log("Visitor logged:", ip);
+      console.log("VL: 1");
     } catch (err) {
-      console.error("Logging failed:", err);
+      console.error("VL err: ", err);
     }
   }
 
