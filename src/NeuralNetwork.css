@@ -8,3 +8,31 @@
     opacity: 1;
     pointer-events: auto; /* Allow interaction when visible */
   }
+  
+  .neuron-info {
+    position: absolute;
+    background: var(--color-background-lighter);
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    width: max-content;
+    max-width: 250px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 
+      opacity var(--transition-medium),
+      transform var(--transition-medium);
+    /* Remove pointer-events none so the inner text is always hoverable */
+    pointer-events: auto; 
+    z-index: 3;
+    box-shadow: 0 0 15px rgba(245, 197, 24, 0.3);
+}
+
+.neuron-info.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.neuron-title {
+    pointer-events: auto;
+}

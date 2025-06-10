@@ -38,6 +38,12 @@ const projects: Project[] = [
     technologies: ["React", "TypeScript", "Groq API"]
   },
   {
+    id: "universal-mute",
+    title: "Universal Micropphone Mute for Windows",
+    description: "A simple tool to mute/unmute your microphone globally on Windows.",
+    technologies: ["C++", "Python", "Windows API"]
+  },
+  {
     id: "handwriting-recognition",
     title: "Handwriting Recognition",
     description: "A neural network-based system to classify and recognize handwritten characters.",
