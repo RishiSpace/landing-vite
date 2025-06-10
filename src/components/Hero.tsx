@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
           <h1>Rishikesh Giridhar</h1>
           <p>Engineering Student | AI/ML Enthusiast</p>
           <div className="social-links">
-            <a href="https://rishisp.me/r/linkedin" target="_blank" rel="noopener noreferrer">
+            <a href="https://rishisp.tech/r/linkedin" target="_blank" rel="noopener noreferrer">
               <Linkedin size={24} />
             </a>
             <a href="https://github.com/RishiSpace" target="_blank" rel="noopener noreferrer">
