@@ -14,6 +14,10 @@ const About: React.FC = () => {
             allowing me to build intelligent systems and understand the inner workings of modern computing 
             from both hardware and software perspectives.
           </p>
+          <p className="about-link">
+            If you wanna know more about my projects,{' '}
+            <a href="/Projects">click here</a>.
+          </p>
         </div>
         <div className="about-image">
           <img src="/media/rishi-pro.png" alt="Profile" className="profile-image" />

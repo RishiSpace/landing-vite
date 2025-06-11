@@ -10,7 +10,7 @@
   --color-background: #0e0e0e;
   --color-background-light: #1a1a1a;
   --color-background-lighter: #232323;
-  --color-primary: #f5c518;
+  --color-primary: #2563eb; /* blue-600 */
   --color-text: #ffffff;
   --color-text-muted: #cccccc;
   --transition-slow: 0.4s ease-in-out;
@@ -115,7 +115,7 @@ h2 {
   border-radius: 50% / 30%;
   padding: 2rem 3rem;
   text-align: center;
-  box-shadow: 0 0 20px rgba(245, 197, 24, 0.3);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3); /* blue shadow */
   max-width: 90vw;
   transition: all var(--transition-medium);
   animation: glow 4s infinite alternate;
@@ -123,10 +123,10 @@ h2 {
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 15px rgba(245, 197, 24, 0.2);
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
   }
   100% {
-    box-shadow: 0 0 30px rgba(245, 197, 24, 0.4);
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
   }
 }
 
@@ -299,7 +299,7 @@ h2 {
 }
 
 .neuron-tech {
-  background: rgba(245, 197, 24, 0.2);
+  background: rgba(37, 99, 235, 0.2);
   color: var(--color-primary);
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
@@ -383,7 +383,7 @@ h2 {
     --color-background: #f9f9f9;
     --color-background-light: #ffffff;
     --color-background-lighter: #f3f3f3;
-    --color-primary: #f5c518;
+    --color-primary: #2563eb;
     --color-text: #181818;
     --color-text-muted: #555555;
   }

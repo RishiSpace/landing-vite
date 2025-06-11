@@ -93,15 +93,15 @@ const NeuralNetwork: React.FC = () => {
       ctx.quadraticCurveTo(cpX, cpY, to.x, to.y);
 
       const glow = 0.4 + 0.6 * Math.abs(Math.sin(t + from.y / 100));
-      ctx.strokeStyle = `rgba(245, 197, 24, ${glow})`;
+      ctx.strokeStyle = '#2563eb'; // blue-600
       ctx.lineWidth = 2;
-      ctx.shadowColor = "#f5c518";
+      ctx.shadowColor = "#2563eb";
       ctx.shadowBlur = glow * 20;
       ctx.stroke();
       ctx.shadowBlur = 0; // Reset shadow before drawing text
 
       ctx.font = '14px Outfit'; // Ensure font is set before measureText
-      ctx.fillStyle = `rgba(245, 197, 24, 0.6)`;
+      ctx.fillStyle = `rgba(77, 169, 235, 0.7)`;
       
       const text = from.title;
       const textMetrics = ctx.measureText(text);

@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Contact: React.FC = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
+  const [isLight, setIsLight] = useState(false);
+
+  useEffect(() => {
+    const match = window.matchMedia('(prefers-color-scheme: light)');
+    setIsLight(match.matches);
+    const handler = (e: MediaQueryListEvent) => setIsLight(e.matches);
+    match.addEventListener('change', handler);
+    return () => match.removeEventListener('change', handler);
+  }, []);
+
+  const inputClasses = isLight
+    ? "w-full p-2 border border-gray-300 rounded bg-white text-black"
+    : "w-full p-2 border border-gray-900 rounded bg-gray-900 text-white";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,7 +64,7 @@ const Contact: React.FC = () => {
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               required
-              className="w-full p-2 border border-gray-900 rounded bg-gray-900"
+              className={inputClasses}
             />
           </div>
           <div className="mb-4">
@@ -65,14 +78,14 @@ const Contact: React.FC = () => {
               onChange={(e) => setMessage(e.target.value)}
               required
               rows={5}
-              className="w-full p-2 border border-gray-900 rounded bg-gray-900"
+              className={inputClasses}
             ></textarea>
           </div>
           {error && <p className="text-red-500 mb-4">{error}</p>}
           {success && <p className="text-green-500 mb-4">Message sent successfully!</p>}
           <button
             type="submit"
-            className="w-full px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-400 transition-colors"
+            className="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-400 transition-colors"
           >
             Send
           </button>
