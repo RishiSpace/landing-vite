@@ -181,9 +181,9 @@ const Projects: React.FC = () => {
         {/* OSFM Umbrella Card */}
         <div className="mb-12">
           <ProjectCard
-            title="OSFM Umbrella"
+            title="OSFM"
             subtitle="A suite of open-source productivity and management tools"
-            description="OSFM is a collection of modern, AI-enhanced, and productivity-focused tools for developers and power users. Explore the OSFM ecosystem:"
+            description="OSFM is an umbrella of modern, AI-enhanced, and productivity-focused tools for developers and power users. Explore the OSFM ecosystem:"
             features={[
               "Unified design and experience",
               "AI-powered enhancements",
