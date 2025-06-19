@@ -1,4 +1,5 @@
 import React from 'react';
+import rishiPro from '/media/rishi-pro.png'; // Import the image
 
 const About: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const About: React.FC = () => {
           </p>
         </div>
         <div className="about-image">
-          <img src="/landing-vite/media/rishi-pro.png" alt="Profile" className="profile-image" />
+          <img src={rishiPro} alt="Profile" className="profile-image" />
         </div>
       </div>
     </section>
