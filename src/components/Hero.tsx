@@ -1,6 +1,7 @@
 import React from 'react';
 import NeuralNetwork from './NeuralNetwork';
 import { Github, Linkedin, FileText } from 'lucide-react';
+import resumePdf from '/media/Resume-Rishikesh-Giridhar.pdf'; // Import the PDF
 
 const Hero: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ const Hero: React.FC = () => {
             <a href="https://github.com/RishiSpace" target="_blank" rel="noopener noreferrer">
               <Github size={24} />
             </a>
-            <a href="/media/Resume-Rishikesh-Giridhar.pdf" target="_blank" rel="noopener noreferrer">
+            <a href={resumePdf} target="_blank" rel="noopener noreferrer">
               <FileText size={24} />
             </a>
           </div>
