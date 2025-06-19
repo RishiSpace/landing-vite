@@ -189,7 +189,7 @@ const Projects: React.FC = () => {
               "AI-powered enhancements",
               "Open-source and extensible"
             ]}
-            liveUrl="https://rishisp.tech/osfm"
+            liveUrl="https://osfm.rishisp.tech/"
           >
             <div>
               <h4 className="text-lg font-semibold text-white mb-3">Included Projects</h4>
