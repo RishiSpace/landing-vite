@@ -1,5 +1,6 @@
 import React from 'react';
-import rishiPro from '/media/rishi-pro.png'; // Import the image
+import rishiPro from '/media/rishi-pro.png';
+import { Link } from 'react-router-dom'; // Add this import
 
 const About: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const About: React.FC = () => {
           </p>
           <p className="about-link">
             If you wanna know more about my projects,{' '}
-            <a href="/Projects">click here</a>.
+            <Link to="/Projects">click here</Link>.
           </p>
         </div>
         <div className="about-image">
