@@ -30,7 +30,7 @@ jobs:
           VITE_ENV_API_KEY: ${{ secrets.VITE_ENV_API_KEY }}
           VITE_ENV_AUTH_DOMAIN: ${{ secrets.VITE_ENV_AUTH_DOMAIN }}
           VITE_ENV_DATABASE_URL: ${{ secrets.VITE_ENV_DATABASE_URL }}
-          VITE_ENV_PROJECTID: ${{ secrets.VITE_ENV_PROJECT_ID }}
+          VITE_ENV_PROJECT_ID: ${{ secrets.VITE_ENV_PROJECT_ID }}
           VITE_ENV_STORAGE_BUCKET: ${{ secrets.VITE_ENV_STORAGE_BUCKET }}
           VITE_ENV_MESSAGING_SENDER_ID: ${{ secrets.VITE_ENV_MESSAGING_SENDER_ID }}
           VITE_ENV_APPID: ${{ secrets.VITE_ENV_APPID }}
