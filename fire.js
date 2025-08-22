@@ -6,7 +6,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebas
     apiKey: import.meta.env.VITE_ENV_API_KEY,
     authDomain: import.meta.env.VITE_ENV_AUTH_DOMAIN,
     databaseURL: import.meta.env.VITE_ENV_DATABASE_URL,
-    projectId: import.meta.env.VITE_ENV_PROJECTID,
+    projectId: import.meta.env.VITE_ENV_PROJECT_ID,
     storageBucket: import.meta.env.VITE_ENV_STORAGE_BUCKET,
     messagingSenderId: import.meta.env.VITE_ENV_MESSAGING_SENDERID,
     appId: import.meta.env.VITE_ENV_APPID
